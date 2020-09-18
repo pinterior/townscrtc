@@ -26,13 +26,13 @@ int main(int argc, char *argv[]) {
    start_display();
 
    for (int c = 0; c < 256; ++c) {
-      set_palette(c, c, c, c);
+      set_palette(c, c, 0, (255 - c) / 2);
    }
 
    for (int y = 0; y < 256; ++y) {
       for (int x = 0; x < 256; ++x) {
          if (x + y < 256) {
-            uint8_t c = 256u - (x + y);
+            uint8_t c = 255u - (x + y);
             if (x % 8 < 4) {
                uint32_t a = y * 512 + x - (x / 8) * 4;
                s0[(0x4000 * 4 + a) & 0x3ffff] = c;
