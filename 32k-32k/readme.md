@@ -10,14 +10,28 @@ CEN0
    - FA = 246
    - CEN = 0
 
-
 Two horizontal white lines with no gap will be shown.
 Right most part of line is green, left most part of line is red.
+
 
 CEN1
 ----
 
 Same as CEN0. But CEN0=0, CEN1=1.
+
+
+FO
+--
+
+ - screen 0
+   - 40 x 30 16bpp (16x zoom)
+   - FO = 256
+ - screen 0
+   - 40 x 30 16bpp (16x zoom)
+   - FO = 2
+
+Four yellow angles around a green square will be shown without any blur.
+
 
 HAJ
 ---

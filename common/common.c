@@ -58,21 +58,21 @@ void set_video(const video_set_t set) {
    }
 }
 
-void _Far *vram0() {
+void _Far *vram0(void) {
    void _Far *p;
    _FP_SEG(p) = 0x0120;
    _FP_OFF(p) = 0;
    return p;
 }
 
-void _Far *vram1() {
+void _Far *vram1(void) {
    void _Far *p;
    _FP_SEG(p) = 0x0120;
    _FP_OFF(p) = 0x40000;
    return p;
 }
 
-void _Far *vram() {
+void _Far *vram(void) {
    void _Far *p;
    _FP_SEG(p) = 0x0128;
    _FP_OFF(p) = 0;

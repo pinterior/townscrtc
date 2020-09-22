@@ -43,9 +43,9 @@ void crtc_out16(crtc_reg_t reg, uint16_t val);
 uint8_t video_in(video_reg_t reg);
 void video_out(video_reg_t reg, uint8_t val);
 
-void _Far *vram0();
-void _Far *vram1();
-void _Far *vram();
+void _Far *vram0(void);
+void _Far *vram1(void);
+void _Far *vram(void);
 
 #define rgb15(r, g, b) (((g & 31) << 10) | ((r & 31) << 5) | (b & 31))
 
